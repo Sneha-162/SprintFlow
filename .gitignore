@@ -1,20 +1,39 @@
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-
-# Virtual Environment
-backend/venv/
-
 # Environment variables
 .env
+.env.*
+!.env.example
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend
+backend/node_modules/
+backend/dist/
+
+# Python, if used
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
 
 # IDE
 .vscode/
 .idea/
 
-# Node
-frontend/node_modules/
+# Coverage
+coverage/
 
-# Logs
-*.log
+# Temporary
+*.tmp
+*.temp

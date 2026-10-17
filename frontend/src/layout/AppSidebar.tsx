@@ -54,7 +54,7 @@ const navItems: NavItem[] = [
     name: "System Pages",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Slate Workspace", path: "/blank" },
+      { name: "Blank Slate Workspace", path: "/system/blank-slate-workspace" },
     ],
   },
 ];
@@ -120,27 +120,26 @@ const AppSidebar: React.FC = () => {
       onMouseEnter={() => !isExpanded && setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* LOGO CONTAINER - Changed justify-start to justify-center */}
       <div
-        className={`py-8 flex ${
-          !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
-        }`}
+        className={`py-8 flex justify-center w-full`}
       >
         <Link to="/">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
               <img
                 className="dark:hidden"
-                src="/images/logo/logo.png"
+                src="/images/logo/logo2.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={100}
+                height={20}
               />
               <img
                 className="hidden dark:block"
                 src="/images/logo/logo-dark.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={100}
+                height={20}
               />
             </>
           ) : (
@@ -153,6 +152,7 @@ const AppSidebar: React.FC = () => {
           )}
         </Link>
       </div>
+      
       <div className="flex flex-col overflow-y-auto duration-300 ease-linear no-scrollbar">
         <nav className="mb-6">
           <div className="flex flex-col gap-4">

@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import PageMeta from "../../components/common/PageMeta";
 import AuthLayout from "./AuthPageLayout";
 import SignInForm from "../../components/auth/SignInForm";
@@ -12,6 +13,18 @@ export default function SignIn() {
       <AuthLayout>
         <SignInForm />
       </AuthLayout>
+      <Link
+  to="/forgot-password"
+  className="text-sm text-brand-500 hover:text-brand-600"
+>
+  Forgot password?
+</Link>
+<Link
+  to="/signup"
+  className="text-brand-500 hover:text-brand-600"
+>
+  Sign up
+</Link>
     </>
   );
 }
